@@ -16,14 +16,8 @@ public class Main {
 
         try {
             FileReader reader = new FileReader("solutions.json");
-
             Object obj = parser.parse(reader);
-
             JSONObject jsonObject = (JSONObject) obj;
-
-            String value = (String) jsonObject.get("keyName");
-            System.out.println("Value: " + value);
-
             JSONArray allSolutions = (JSONArray) jsonObject.get("articles");
 
             File solutionsCSV = new File("allSolutions.csv");
